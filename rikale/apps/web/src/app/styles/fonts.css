@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'HeliosCond';
+  src: url('/fonts/HeliosCond.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HeliosCond';
+  src: url('/fonts/HeliosCond-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HeliosCond';
+  src: url('/fonts/HeliosCond-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HeliosCond';
+  src: url('/fonts/HeliosCond-Bold-Italic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family:"Miracle World Personal Use";
+  src: url("/fonts/Miracle_World.eot") format("eot"),
+  url("/fonts/Miracle_World.woff") format("woff"),
+  url("/fonts/Miracle_World.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
