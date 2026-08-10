@@ -37,6 +37,12 @@ body {
   font-family: var(--font-family-helios-cond);
 }
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 h1{
   font-family: var(--font-family-miracle);
   font-size: 4rem;
@@ -55,3 +61,54 @@ h3{
 h4{
   font-size: 1.125rem;
 }
+
+.swiper {
+  overflow: visible !important;
+}
+
+.swiper-wrapper {
+  overflow: visible !important;
+}
+
+.swiper-slide {
+  overflow: visible !important;
+}
+
+.swiper-slide > div {
+  overflow: visible !important;
+}
+
+.swiper-pagination {
+  display: flex;
+  align-items: center;
+  position: relative !important;
+  bottom: 0 !important;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  height: 30px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  border-radius: 50%;
+  border: 2px solid #8CAEF5 !important;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  background: #8CAEF5 !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 6px;
+  border: none !important;
+}
+
+
+

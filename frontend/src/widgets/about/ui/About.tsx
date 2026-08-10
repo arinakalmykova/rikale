@@ -12,8 +12,8 @@ const skills = [
 
 export function AboutMe() {
     return (
-        <motion.div 
-            className="w-full flex flex-col lg:flex-row gap-[60px] lg:gap-[150px] items-center mt-[80px] lg:mt-[168px] px-4 lg:px-0"
+        <motion.section 
+            className="w-full flex flex-col lg:flex-row gap-[60px] lg:gap-[150px] items-center mt-[80px] lg:mt-[180px] px-4 lg:px-0"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -131,6 +131,6 @@ export function AboutMe() {
                     </div>
                 </div>
             </motion.div>
-        </motion.div>
+        </motion.section>
     );
 }
