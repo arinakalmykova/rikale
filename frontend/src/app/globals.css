@@ -110,5 +110,16 @@ h4{
   border: none !important;
 }
 
+.image-cool-tones {
+  filter: grayscale(0.9) brightness(1.0) contrast(0.7) saturate(0.8);
+  transition: all 0.1s ease;
+}
+
+.image-cool-tones:hover {
+   filter: grayscale(0) brightness(1) contrast(1);
+}
+
+
+
 
 
