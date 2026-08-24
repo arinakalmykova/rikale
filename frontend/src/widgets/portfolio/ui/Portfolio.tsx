@@ -32,11 +32,10 @@ export function Portfolio() {
       </motion.div>
 
       {loading ? (
-        // Скелетон для карточек
         <div className="grid grid-cols-1 gap-6">
           {[1, 2, 3].map((i) => (
             <div key={i} className="animate-pulse">
-              <div className="w-full h-[400px] md:h-[500px] bg-grey rounded-[20px] border-[15px] border-white"></div>
+              <div className="w-full bg-grey rounded-[20px] border-[15px] border-white"></div>
             </div>
           ))}
         </div>
@@ -45,6 +44,7 @@ export function Portfolio() {
       ) : (
         <Swiper
           slidesPerView={1}
+          autoHeight={true} 
           className="w-full pb-12 md:pb-0 !overflow-hidden"
           onSwiper={(swiper) => {
             swiperRef.current = swiper;

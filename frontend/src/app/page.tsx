@@ -1,4 +1,4 @@
-import { Header, Hero, AboutMe, Services, Portfolio } from "@/widgets";
+import { Header, Hero, AboutMe, Services, Portfolio, Steps } from "@/widgets";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <AboutMe/>
       <Services/>
       <Portfolio/>
+      <Steps/>
     </main>
   );
 }

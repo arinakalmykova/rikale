@@ -79,7 +79,7 @@ export function Hero() {
         className="absolute z-10 right-0 -translate-x-30 top-60 hidden 2xl:block"
       />
       <motion.div
-        className="flex flex-col-reverse md:gap-[2rem] gap-[20px] mt-[15%] md:left-0 md:-mt-[60%] lg:-mt-[22rem] xl:-mt-[18rem] lg:flex-row"
+        className="flex flex-col-reverse md:gap-[2.25rem] gap-[20px] mt-[15%] md:left-0 md:-mt-[60%] lg:-mt-[22rem] xl:-mt-[18rem] lg:flex-row"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}

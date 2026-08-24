@@ -42,7 +42,7 @@ export function AboutMe() {
                             transition={{ duration: 0.4, delay: 0.4 + index * 0.1, ease: "easeOut" }}
                         > 
                             <div className="absolute left-0 top-1/2 -translate-y-1/2 h-[45px] lg:h-[55px] bg-grey border border-grey-dark rounded-[20px] w-full -z-10"></div>
-                            <div className="text-black text-[1.2rem] sm:text-[2rem] lg:text-[2.5rem] font-bold uppercase z-10 ml-4 lg:ml-10">
+                            <div className="text-black text-[1.5rem] sm:text-[2.25rem] lg:text-[2.5rem] font-bold uppercase z-10 ml-4 lg:ml-10">
                                 {skill.name}
                             </div>
                             <div className="text-blue text-[3rem] sm:text-[6rem] lg:text-[8rem] font-bold z-10 leading-none mr-4 lg:mr-10">

@@ -13,7 +13,7 @@ export function ServiceCard({ service, className = "" }: ServiceCardProps) {
         className="relative flex h-[400px] sm:h-[444px] md:h-[580px] lg:h-[660px] xl:h-[740px] flex-col rounded-[20px] bg-grey border-[15px] border-white mx-auto"
       >
         <div>
-          <h3 className="!text-[1.2rem] md:!text-[1.2rem] lg:!text-[1.4rem] w-[120px] sm:w-[150px] md:w-[150px] lg:w-[150px] xl:w-[300px] xl:!text-[2.5rem] uppercase mt-[30px] sm:mt-[46px] ml-[20px] sm:ml-[36px] md:mt-[46px] md:ml-[20px] lg:ml-[40px] xl:ml-[70px]">
+          <h3 className="!text-[1.5rem] md:!text-[1.5rem] lg:!text-[1.4rem] w-[150px] sm:w-[150px] md:w-[150px] lg:w-[150px] xl:w-[300px] xl:!text-[2.5rem] uppercase mt-[30px] sm:mt-[46px] ml-[20px] sm:ml-[36px] md:mt-[46px] md:ml-[20px] lg:ml-[40px] xl:ml-[70px]">
             {service.title}
           </h3>
         </div>
@@ -50,8 +50,8 @@ export function ServiceCard({ service, className = "" }: ServiceCardProps) {
         </div>
 
         <div className="mt-auto self-end md:mb-[30px] mb-[20px] sm:b-0 sm:mb-0 mr-[20px] sm:mr-[40px]">
-          <p className="text-[0.9rem] sm:text-base md:text-[1.25rem] font-bold uppercase">
-            от <span className="text-[1.8rem] sm:text-[1.5rem] md:text-[3rem] uppercase font-bold">{service.price}</span> руб
+          <p className="text-[1rem] sm:text-base md:text-[1.25rem] font-bold uppercase">
+            от <span className="text-[2.25rem] sm:text-[1.5rem] md:text-[3rem] uppercase font-bold">{service.price}</span> руб
           </p>
         </div>
       </article>

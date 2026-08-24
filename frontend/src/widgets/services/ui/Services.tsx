@@ -43,7 +43,13 @@ export function Services() {
             pagination: true,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            centeredSlides: true,
+            pagination: true,
+          },
+          945: {
+            slidesPerView: 1,
             spaceBetween: 20,
             centeredSlides: true,
             pagination: true,
