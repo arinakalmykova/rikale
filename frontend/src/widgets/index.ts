@@ -5,4 +5,5 @@ export { Services } from './services/ui/Services';
 export { Portfolio } from './portfolio/ui/Portfolio';
 export { Steps } from './steps/ui/Steps';
 export { ContactForm } from './contact-form/ui/ContactForm';
+export { Footer } from './footer/ui/Footer';
 

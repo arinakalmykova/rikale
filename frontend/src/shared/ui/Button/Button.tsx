@@ -37,10 +37,7 @@ export function Button({ children, href, className, reverse, onClick }: propsBut
     return (
       <Link
         href={href}
-        className={
-          className ||
-          "text-black cursor-pointer uppercase text-bold text-[1.125rem] xl:text-[1.25rem] font-bold flex items-center gap-[1.25rem] md:gap-[1.875rem]"
-        }
+        className={`${className || ''} text-black cursor-pointer uppercase text-bold text-[1.125rem] xl:text-[1.25rem] font-bold flex items-center gap-[1.25rem] md:gap-[1.875rem]`}
         style={{ 
           cursor: 'pointer',
           flexDirection: reverse ? 'row-reverse' : 'row' 
@@ -59,10 +56,7 @@ export function Button({ children, href, className, reverse, onClick }: propsBut
 
   return (
     <button
-      className={
-        className ||
-        "text-black cursor-pointer uppercase text-bold text-[1.125rem] md:text-[1.25rem] font-bold flex items-center gap-[1.25rem] md:gap-[1.875rem]"
-      }
+      className={`${className || ''} text-black cursor-pointer uppercase text-bold text-[1.125rem] md:text-[1.25rem] font-bold flex items-center gap-[1.25rem] md:gap-[1.875rem]`}
       style={{ 
         cursor: 'pointer',
         flexDirection: reverse ? 'row-reverse' : 'row' 

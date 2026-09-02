@@ -5,6 +5,7 @@ import { services, ServiceCard } from "@/entities";
 import { motion } from "framer-motion";
 import { Pagination } from "swiper/modules";
 import "swiper/css/pagination";
+import { Button } from "@/shared/";
 
 export function Services() {
   return (
@@ -95,6 +96,7 @@ export function Services() {
           </SwiperSlide>
         ))}
       </Swiper>
+      <Button className="ml-auto text-blue">Мой прайс</Button>
     </motion.section>
   );
 }

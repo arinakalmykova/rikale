@@ -1,12 +1,19 @@
 "use client";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Form from "next/form";
 import { Button } from "@/shared/";
 import { Input } from "@/shared/";
+import { useContactForm } from "@/features";
 
 export function ContactForm() {
+    const {
+    submit,
+    isSubmitting,
+    isSuccess,
+    error,
+  } = useContactForm();
+
+ 
   return (
     <motion.section
       id="contact-form"
@@ -37,9 +44,9 @@ export function ContactForm() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
         >
-          <Form action="/search" className="flex flex-col w-full">
+          <form className="flex flex-col w-full"  onSubmit={submit}>
             <motion.h1
-              className="uppercase text-center lg:text-right mb-[40px] md:mb-[60px] lg:mb-[100px] !text-[2.5rem] lg:!text-[2.5rem] xl:!text-[3rem] font-light"
+              className="uppercase text-center lg:text-right mb-[40px] md:mb-[60px] lg:mb-[100px] !text-[2.5rem] lg:!text-[2.5rem] xl:!text-[4rem] font-light"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
@@ -53,22 +60,28 @@ export function ContactForm() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
             >
-              Оставить заявку
+              Расскажите о вашей задаче
             </motion.h2>
 
             <motion.div
-              className="flex flex-col gap-[30px] md:gap-[40px] lg:gap-[64px] items-center lg:items-end"
+              className="flex flex-col gap-[30px] md:gap-[40px] lg:gap-[45px] items-center lg:items-end"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
             >
+              {/* Имя */}
               <motion.div
                 className="w-full max-w-[400px] lg:max-w-full"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.7, ease: "easeOut" }}
+                transition={{
+                  duration: 0.4,
+                  delay: 0.7,
+                  ease: "easeOut",
+                }}
               >
                 <Input
+                  name="name"
                   placeholder="Ваше имя"
                   type="text"
                   required
@@ -76,24 +89,60 @@ export function ContactForm() {
                 />
               </motion.div>
 
+              {/* Контакт */}
               <motion.div
                 className="w-full max-w-[400px] lg:max-w-full"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.8, ease: "easeOut" }}
+                transition={{
+                  duration: 0.4,
+                  delay: 0.8,
+                  ease: "easeOut",
+                }}
               >
                 <Input
-                  placeholder="Ваш телефон"
-                  type="tel"
+                  name="contact"
+                  placeholder="Как с вами связаться?"
+                  type="text"
                   required
                   className="w-full"
                 />
               </motion.div>
+
+              {/* Описание проекта */}
+              <motion.div
+                className="w-full max-w-[400px] lg:max-w-full"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.4,
+                  delay: 0.9,
+                  ease: "easeOut",
+                }}
+              >
+                <textarea
+                  name="message"
+                  placeholder="Расскажите немного о вашем проекте"
+                  rows={4}
+                  className="w-full resize-none border-b border-black bg-transparent pb-[12px] outline-none placeholder:text-black/50"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.4,
+                  delay: 1,
+                  ease: "easeOut",
+                }}
+              >
                 <Button>
-                  Оставить заявку
+                  Обсудить проект
                 </Button>
+                     </motion.div>
             </motion.div>
-          </Form>
+          </form>
         </motion.div>
       </div>
     </motion.section>
