@@ -46,7 +46,7 @@ export function Header() {
   return (
     <>
       <motion.header 
-        className="w-full pt-[54px] relative z-50"
+        className="w-full pt-[54px] relative z-50 px-[20px] md:px-[80px] xl:px-[120px]"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -169,7 +169,7 @@ export function Header() {
                     <Link
                       href={item.href}
                       onClick={closeMenu}
-                      className=" text-xl md:text-2xl uppercase font-semibold text-black hover:text-blue transition-colors duration-300 block py-2 border-b border-grey"
+                      className=" text-xl md:text-2xl uppercase font-bold text-black hover:text-blue transition-colors duration-300 block py-2 border-b border-grey"
                     >
                       {item.title}
                     </Link>
@@ -184,8 +184,8 @@ export function Header() {
                 className="mt-8 pt-8 border-t border-grey"
               >
                 <p className="text-sm text-gray-500">Свяжитесь со мной</p>
-                <a href="mailto:hello@example.com" className="text-blue hover:underline">
-                  aricrate@yandex.com
+                <a href="mailto:aricrate@yandex.ru" className="text-blue hover:underline">
+                  aricrate@yandex.ru
                 </a>
               </motion.div>
             </motion.nav>

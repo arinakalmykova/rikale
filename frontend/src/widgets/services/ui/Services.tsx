@@ -96,7 +96,11 @@ export function Services() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Button className="ml-auto text-blue">Мой прайс</Button>
+      <div className="flex justify-end mt-[40px]">
+        <Button className="text-blue" href="/price">
+          Мой прайс
+        </Button>
+      </div>
     </motion.section>
   );
 }

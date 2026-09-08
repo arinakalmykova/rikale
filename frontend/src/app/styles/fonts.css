@@ -31,10 +31,8 @@
 }
 
 @font-face {
-  font-family:"Miracle World Personal Use";
-  src: url("/fonts/Miracle_World.eot") format("eot"),
-  url("/fonts/Miracle_World.woff") format("woff"),
-  url("/fonts/Miracle_World.ttf") format("truetype");
+  font-family:"Miracle_World";
+  src: url("/fonts/Miracle_World.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

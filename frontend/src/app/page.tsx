@@ -1,16 +1,19 @@
 import { Header, Hero, AboutMe, Services, Portfolio, Steps, ContactForm, Footer } from "@/widgets";
 
 export default function Home() {
-  return (
-    <main className=" px-[20px] md:px-[80px] xl:px-[120px]">
-      <Header/>
+  return ( 
+     <> 
+     <Header/>
+    <main className="px-[20px] md:px-[80px] xl:px-[120px]">
       <Hero/>
       <AboutMe/>
       <Services/>
       <Portfolio/>
       <Steps/>
       <ContactForm/>
-      <Footer/>
-    </main>
+    </main> 
+    <Footer/>
+     </>
+  
   );
 }

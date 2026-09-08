@@ -44,7 +44,7 @@ export function ServiceCard({ service, className = "" }: ServiceCardProps) {
                   fill="black"
                 />
               </svg>
-              {type}
+              {type.name}
             </li>
           ))}
         </div>
