@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { Button } from "@/shared";
+import { Button,  Form } from "@/shared";
 import Image from "next/image";
+import { useState } from "react";
 
 const skills = [
     { name: "Adobe Photoshop", procent: 90 },
@@ -11,6 +12,7 @@ const skills = [
 ];
 
 export function AboutMe() {
+    const [isOpen, setOpen] = useState<Boolean>(false);
     return (
         <motion.section 
             className="w-full flex flex-col lg:flex-row gap-[60px] lg:gap-[150px] items-center mt-[80px] lg:mt-[180px] px-4 lg:px-0"
@@ -118,7 +120,10 @@ export function AboutMe() {
                             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="31" viewBox="0 0 42 31" fill="none" className="hidden md:block">
                                 <path d="M24.5298 31V18.2711C24.5298 8.4475 31.059 1.78939 40.25 0L41.9913 3.7045C37.7353 5.28378 35 9.96994 35 13.7778H42V31H24.5298ZM0 31V18.2711C0 8.4475 6.559 1.78939 15.75 0L17.493 3.7045C13.2353 5.28378 10.5 9.96994 10.5 13.7778H17.4702V31H0Z" fill="#8CAEF5"/>
                             </svg>
-                            <Button className="">Обсудить проект</Button>
+                            <div className="flex flex-col items-start">
+                                    <Button onClick={() => setOpen(true)}>Обсудить проект</Button>
+                                    {isOpen && <Form onClose={() => setOpen(false)} />}
+                            </div>
                         </motion.div>
                         <motion.span 
                             className="text-[1.125rem]"

@@ -9,10 +9,10 @@ export declare class ContactService {
         contact: string;
         message: string;
     }): Promise<{
+        id: number;
+        createdAt: Date;
         name: string;
         contact: string;
         message: string;
-        createdAt: Date;
-        id: number;
     }>;
 }

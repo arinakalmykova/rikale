@@ -1,9 +1,11 @@
 "use client";
-import { Button } from "@/shared/";
+import { Button, Form } from "@/shared/";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export function Hero() {
+  const [isOpen, setOpen] = useState<Boolean>(false);
   return (
     <div className="w-full flex flex-col items-center md:items-stretch mt-[60px] md:mt-[75px]">
       <motion.div
@@ -24,7 +26,7 @@ export function Hero() {
             className="w-[350px] h-[315px] z-1 bg-grey border border-grey-dark absolute rounded-[20px] md:w-[284px] md:h-[255px]"/>
         </div>
         <motion.div
-          className="w-[240px] h-[69px] pl-[18px] border-l-1 ml-[63px] hidden xl:block"
+          className="w-[240px] h-[90px] pl-[18px] border-l-1 ml-[63px] hidden xl:block"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
@@ -84,13 +86,12 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
       >
-        <motion.div
-          whileHover={{ scale: 1.04 }}
-          whileTap={{ scale: 0.97 }}
-          transition={{ duration: 0.2 }}
-        >
-          <Button>Обсудить проект</Button>
-        </motion.div>
+
+        <div className="flex flex-col items-start">
+          <Button onClick={() => setOpen(true)}>Обсудить проект</Button>
+          {isOpen && <Form onClose={() => setOpen(false)} />}
+        </div>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

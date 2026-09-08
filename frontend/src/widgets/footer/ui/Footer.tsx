@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export function Footer() {
   return (
     <motion.footer
-      className="w-full py-[40px] md:py-[54px] relative z-50 border-t border-black mt-[80px] md:mt-[140px]"
+      className="w-full z-10 py-[40px] md:py-[54px] relative border-t border-black mt-[80px] md:mt-[140px]"
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
