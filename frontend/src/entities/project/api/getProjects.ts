@@ -12,3 +12,16 @@ export async function getProjects(): Promise<Project[]> {
 
   return response.json();
 }
+
+export async function getProjectByLink (link:string): Promise<Project | null> {
+  const response = await fetch(`${API_URL}/projects/by-link?link=${encodeURIComponent(link)}`, {
+	cache: "no-store",
+  });
+
+  if (!response.ok) {
+	throw new Error("Не удалось загрузить проекты");
+  }
+
+  return response.json();
+}
+

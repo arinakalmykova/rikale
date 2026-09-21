@@ -1,9 +1,14 @@
-import { Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
+import { Controller, Get, Param, ParseIntPipe, Query } from '@nestjs/common';
 import { ProjectService } from './projects.service';
 
 @Controller('projects')
 export class ProjectController {
   constructor(private readonly projectsService: ProjectService) {}
+
+  @Get("by-link")
+  findByLink(@Query("link") link: string) {
+    return this.projectsService.findByLink(link);
+  }
 
   @Get()
   findAll() {
@@ -14,4 +19,5 @@ export class ProjectController {
   findOne(@Param('id', ParseIntPipe) id: number) {
     return this.projectsService.findOne(id);
   }
+
 }

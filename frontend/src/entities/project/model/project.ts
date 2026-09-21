@@ -4,5 +4,13 @@ export interface Project {
     description: string;
     steps: string[];
     link:string;
-    image: string;
+    images: string[];
+    price: string;
+    duration: string;
+    goals: string[];
+    tasks: string[];
+    audienceText:string[]
+    prototypeText:string[]
+    resultText:string;
+    colors:string[];
 }

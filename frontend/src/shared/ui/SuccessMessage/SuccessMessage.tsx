@@ -27,13 +27,12 @@ export function SuccessMessage({ onClose }: SuccessMessageProps) {
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-black hover:text-blue transition-colors text-2xl z-10"
+          className="absolute top-6 right-6 text-black hover:text-blue transition-colors text-2xl z-10"
           aria-label="Закрыть"
         >
           ✕
         </button>
 
-        {/* Заголовок */}
         <motion.h2
           className="text-2xl md:text-3xl font-bold uppercase text-black mb-3"
           initial={{ opacity: 0, y: 10 }}

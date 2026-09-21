@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export function Footer() {
   return (
     <motion.footer
-      className="px-[20px] md:px-[80px] xl:px-[120px] w-full z-10 py-[40px] md:py-[54px] relative border-t border-black mt-[80px] md:mt-[140px]"
+      className="px-[20px] md:px-[80px] xl:px-[120px] w-full z-10 relative"
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -14,7 +14,7 @@ export function Footer() {
         ease: "easeOut",
       }}
     >
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-[20px] md:gap-[40px] mx-auto">
+      <div className="flex flex-col mobile:flex-row py-[40px] md:py-[54px] justify-between items-center border-t border-black gap-[20px] md:gap-[40px] mx-auto">
         <Link  href="tel:+79807287752">
         <h2 className="text-black font-bold !text-[1rem] sm:!text-[1.2rem] md:!text-[1.5rem] lg:!text-[2.25rem] lg:!text-[2.25rem] whitespace-nowrap order-2 sm:order-1">
           8 (<span className="text-blue">980</span>) 728-77-52
@@ -22,12 +22,11 @@ export function Footer() {
         </Link>
         <div className="order-1 sm:order-2">
           <Logo
-            src="./logo_footer.svg"
+            src="/logo_footer.svg"
             style="w-[150px] md:w-[200px] lg:w-[300px] h-auto"
           />
         </div>
         <div className="flex gap-[16px] md:gap-[40px] order-3">
-          {/* Telegram */}
           <Link
             href="https://vk.ru/ronariron"
             target="_blank"
@@ -83,6 +82,7 @@ export function Footer() {
             height="40"
             viewBox="0 0 40 40"
             fill="none"
+            className="w-[24px] h-[24px] sm:w-[30px] sm:h-[30px] md:w-[40px] md:h-[40px]"
           >
             <path
               d="M32 0C36.4183 0 40 3.58172 40 8V32C40 36.4183 36.4183 40 32 40H8C3.58172 40 6.44277e-08 36.4183 0 32V8C0 3.58172 3.58172 6.44256e-08 8 0H32ZM19.5488 7.01758C11.804 7.40809 6.69164 13.269 7.01465 20.6592C7.15579 23.8938 8.50294 26.6772 8.82227 29.7471C8.90394 30.5423 8.66681 31.5236 9.61719 31.8711C10.7867 32.2974 12.5804 31.5813 13.5605 30.9258C13.8946 30.7073 14.214 30.4529 14.459 30.1377C15.4725 30.786 16.4341 31.413 17.6406 31.6924C22.9536 32.9211 28.7755 30.109 31.3633 25.5918C36.227 17.1054 29.6514 6.5089 19.5488 7.01758ZM19.2627 13.168C22.1587 12.9208 24.8474 14.34 26.0615 16.9014C28.7491 22.6005 21.8697 28.228 16.542 24.7324V24.7285C16.1224 25.0438 15.717 25.4735 15.2529 25.7207C14.5811 26.068 14.3735 25.7059 14.1211 25.1328C13.3267 23.3095 13.2294 20.2042 13.6934 18.2949C14.3171 15.6979 16.4003 13.4117 19.2627 13.168Z"

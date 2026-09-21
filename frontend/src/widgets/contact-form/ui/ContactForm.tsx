@@ -23,7 +23,7 @@ export function ContactForm() {
   return (
     <motion.section
       id="contact-form"
-      className="w-full mt-[80px] lg:mt-[180px]"
+      className="w-full mt-[80px] lg:mt-[180px] mb-[80px] md:mb-[140px]"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}

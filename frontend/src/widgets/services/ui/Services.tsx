@@ -26,6 +26,7 @@ export function Services() {
           Услуги
         </h1>
       </motion.div>
+      <div className="block min-[1920px]:hidden">
       <Swiper
         modules={[Pagination]}
         initialSlide={1}
@@ -41,35 +42,29 @@ export function Services() {
             slidesPerView: 1,
             spaceBetween: 20,
             centeredSlides: true,
-            pagination: true,
           },
           768: {
             slidesPerView: 1,
             spaceBetween: 20,
             centeredSlides: true,
-            pagination: true,
           },
           945: {
             slidesPerView: 1,
             spaceBetween: 20,
             centeredSlides: true,
-            pagination: true,
           },
           1024: {
             slidesPerView: 2,
             spaceBetween: 20,
             centeredSlides: true,
-            pagination: true,
           },
           1280: {
             slidesPerView: 2,
             spaceBetween: 20,
-            pagination: true,
           },
           1920: {
             slidesPerView: 3,
             spaceBetween: 20,
-            pagination: false,
           },
         }}
       >
@@ -96,6 +91,29 @@ export function Services() {
           </SwiperSlide>
         ))}
       </Swiper>
+       </div>
+
+       <div className="hidden min-[1920px]:grid grid-cols-3 gap-[20px]">
+        {services.map((service, index) => (
+          <motion.div
+            key={service.id}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.4 + index * 0.1,
+              ease: "easeOut",
+            }}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          >
+            <ServiceCard
+              service={service}
+              className="rounded-[20px] shadow-[1px_1px_30px_rgba(0,0,0,0.25)]"
+            />
+          </motion.div>
+        ))}
+      </div>
+
       <div className="flex justify-end mt-[40px]">
         <Button className="text-blue" href="/price">
           Мой прайс

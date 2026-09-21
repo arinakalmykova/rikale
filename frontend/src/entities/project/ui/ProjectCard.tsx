@@ -41,7 +41,7 @@ export function ProjectCard({ project, className = "", onPrev, onNext }: Project
       <div className="w-full xl:w-[55%] order-1 xl:order-2">
         <div className=" relative flex items-center justify-center w-full rounded-[20px] border-[10px] md:border-[15px] border-white overflow-hidden">
           <Image
-            src={project.image}
+            src={project.images[0]}
             width={1114}
             height={734}
             alt={`Фото портфолио: ${project.title}`}

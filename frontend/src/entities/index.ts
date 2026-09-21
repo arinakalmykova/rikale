@@ -5,6 +5,7 @@ export { ServiceSection } from './service/ui/ServiceSection';
 export type { Project } from './project/model/project';
 export { ProjectCard } from './project/ui/ProjectCard';
 export { getProjects } from './project/api/getProjects';
+export { getProjectByLink } from './project/api/getProjects';
 export { steps } from './step/model/step';
 export { StepCard } from './step/ui/StepCard';
 export type { Step } from './step/model/step';

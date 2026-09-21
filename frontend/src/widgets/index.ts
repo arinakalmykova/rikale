@@ -6,4 +6,6 @@ export { Portfolio } from './portfolio/ui/Portfolio';
 export { Steps } from './steps/ui/Steps';
 export { ContactForm } from './contact-form/ui/ContactForm';
 export { Footer } from './footer/ui/Footer';
+export { ProjectSlider } from './detail/ProjectSlider/ProjectSlider';
+export { ProjectCards} from './detail/ProjectCards/ProjectCards';
 

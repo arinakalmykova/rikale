@@ -21,4 +21,12 @@ export class ProjectService {
             },
         })
     }
+
+   async findByLink(link: string) {
+  return this.prisma.project.findUnique({
+    where: {
+      link,
+    },
+  });
+}
 }

@@ -20,6 +20,9 @@ let ProjectController = class ProjectController {
     constructor(projectsService) {
         this.projectsService = projectsService;
     }
+    findByLink(link) {
+        return this.projectsService.findByLink(link);
+    }
     findAll() {
         return this.projectsService.findAll();
     }
@@ -28,6 +31,13 @@ let ProjectController = class ProjectController {
     }
 };
 exports.ProjectController = ProjectController;
+__decorate([
+    (0, common_1.Get)("by-link"),
+    __param(0, (0, common_1.Query)("link")),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", void 0)
+], ProjectController.prototype, "findByLink", null);
 __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),

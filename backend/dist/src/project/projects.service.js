@@ -31,6 +31,13 @@ let ProjectService = class ProjectService {
             },
         });
     }
+    async findByLink(link) {
+        return this.prisma.project.findUnique({
+            where: {
+                link,
+            },
+        });
+    }
 };
 exports.ProjectService = ProjectService;
 exports.ProjectService = ProjectService = __decorate([

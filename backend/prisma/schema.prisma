@@ -1,7 +1,10 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
 generator client {
-  provider     = "prisma-client"
-  output       = "../src/generated/prisma"
-  moduleFormat = "cjs"
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -9,14 +12,22 @@ datasource db {
 }
 
 model Project {
-  id          Int      @id @default(autoincrement())
-  title       String
-  description String
-  steps       String[]
-  link        String
-  image       String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+    id Int  @id @default(autoincrement())
+    title String
+    description String
+    steps String[]
+    link String @unique
+    images String[]
+    price String?
+    duration String?
+    goals           String[]   @default([])
+    tasks           String[]   @default([])
+    audienceText    String[]
+    prototypeText   String[]
+    resultText      String?
+    colors          String[]   @default([])
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
 }
 
 model ContactRequest {
@@ -26,3 +37,4 @@ model ContactRequest {
   message   String
   createdAt DateTime @default(now())
 }
+

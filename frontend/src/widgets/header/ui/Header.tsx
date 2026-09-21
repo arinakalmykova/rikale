@@ -7,26 +7,26 @@ import { useState } from "react";
 const navItemsLeft = [
   {
     title: "Обо мне",
-    href: "#about",
+    href: "/#about",
   },
   {
     title: "Услуги",
-    href: "#services",
+    href: "/#services",
   },
 ];
 
 const navItemsRight = [
   {
     title: "Портфолио",
-    href: "#portfolio",
+    href: "/#portfolio",
   },
   {
     title: "Этапы работ",
-    href: "#steps",
+    href: "/#steps",
   },
   {
     title: "Контакты",
-    href: "#contact-form",
+    href: "/#contact-form",
   },
 ];
 
@@ -72,8 +72,8 @@ export function Header() {
             </nav>
             
             <div className="flex justify-center">
-              <Logo src="./logo.svg" style="hidden xl:block"/>
-              <Logo src="./logo_mobile.svg" style="block xl:hidden w-35"/>
+              <Logo src="/logo.svg" style="hidden xl:block"/>
+              <Logo src="/logo_mobile.svg" style="block xl:hidden w-35"/>
             </div>
             
             <div
