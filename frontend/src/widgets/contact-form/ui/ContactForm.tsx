@@ -76,7 +76,7 @@ export function ContactForm() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
             >
-              {/* Имя */}
+  
               <motion.div
                 className="w-full max-w-[400px] lg:max-w-full"
                 initial={{ opacity: 0, x: -20 }}
@@ -96,7 +96,6 @@ export function ContactForm() {
                 />
               </motion.div>
 
-              {/* Контакт */}
               <motion.div
                 className="w-full max-w-[400px] lg:max-w-full"
                 initial={{ opacity: 0, x: -20 }}
@@ -115,8 +114,6 @@ export function ContactForm() {
                   className="w-full"
                 />
               </motion.div>
-
-              {/* Описание проекта */}
               <motion.div
                 className="w-full max-w-[400px] lg:max-w-full"
                 initial={{ opacity: 0, x: -20 }}

@@ -8,4 +8,5 @@ export { ContactForm } from './contact-form/ui/ContactForm';
 export { Footer } from './footer/ui/Footer';
 export { ProjectSlider } from './detail/ProjectSlider/ProjectSlider';
 export { ProjectCards} from './detail/ProjectCards/ProjectCards';
+export { PriceList } from './PriceList/ui/PriceList';
 

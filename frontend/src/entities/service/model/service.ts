@@ -17,7 +17,7 @@ export const services: Service[] = [
   {
     id: 1,
     title: "Веб-дизайн",
-    image: "services/photo_01.jpg",
+    image: "services/photo_01.png",
     position: "left",
     types: [
       {
@@ -48,7 +48,7 @@ export const services: Service[] = [
   {
     id: 2,
     title: "Графический дизайн",
-    image: "services/photo_02.jpg",
+    image: "services/photo_02.png",
     position: "right",
     types: [
       {
@@ -79,7 +79,7 @@ export const services: Service[] = [
   {
     id: 3,
     title: "Дизайн полиграфии",
-    image: "services/photo_03.jpg",
+    image: "services/photo_03.png",
     position: "left",
     types: [
       {
@@ -104,6 +104,41 @@ export const services: Service[] = [
       },
     ],
     price: "1 500",
+    link: "/price",
+  },
+
+  {
+    id: 4,
+    title: "Веб-разработка",
+    image: "services/photo_04.png",
+    position: "right",
+    types: [
+      {
+        name: "Верстка сайта",
+        price: "5 000",
+      },
+      {
+        name: "Landing page",
+        price: "20 000",
+      },
+      {
+        name: "Многостраничный сайт",
+        price: "35 000",
+      },
+      {
+        name: "Frontend-разработка",
+        price: "2 000",
+      },
+      {
+        name: "Backend-разработка",
+        price: "3 000",
+      },
+      {
+        name: "Доработка сайта",
+        price: "1 500",
+      },
+    ],
+    price: "5 000",
     link: "/price",
   },
 ];

@@ -37,7 +37,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           >
-            Дизайн,
+            Дизайн и разработка,
             <br />
             который говорит на языке ваших клиентов
           </motion.h3>
@@ -103,7 +103,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7, ease: "easeOut" }}
           >
-            Разрабатываю эффективные дизайн-решения
+            Разрабатываю эффективные дизайн-решения и современные веб-проекты
             <br /> для бизнеса с фокусом на результат и рост ваших продаж
           </motion.div>
         </motion.div>

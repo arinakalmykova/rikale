@@ -2,10 +2,40 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Rikale | Designer & Frontend Developer",
+  title: "Rikale — веб-дизайн и разработка",
   description:
-    "Сайт-ортфолио дизайнера и frontend-разработчика Арины Калмыковой",
+    "Портфолио Арины Калмыковой — веб-дизайн, веб-разработка и создание современных цифровых проектов.",
+  keywords: [
+    "веб-дизайн",
+    "веб-разработка",
+    "создание сайтов",
+    "дизайн сайтов",
+    "frontend",
+    "backend",
+    "графический дизайн",
+  ],
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "Rikale — веб-дизайн и разработка",
+    description:
+      "Сайты, интерфейсы и цифровые проекты от идеи и дизайна до реализации.",
+    url: "https://rikale.ru",
+    siteName: "Rikale",
+    locale: "ru_RU",
+    type: "website",
+    images: [
+      {
+        url: "https://rikale.ru/logo.svg",
+        width: 1200,
+        height: 630,
+        alt: "Rikale",
+      },
+    ],
+  },
 };
+
 
 export default function RootLayout({
   children,

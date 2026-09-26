@@ -1,9 +1,16 @@
+
+"use client";
 import { Header, Footer } from "@/widgets";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProjectByLink } from "@/entities";
-import type { Project } from "@/entities";
 import { ProjectSlider, ProjectCards } from "@/widgets";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Портфолио | Rikale",
+  description:
+    "Примеры работ.",
+};
 
 type Props = {
   params: Promise<{ slug: string }>;

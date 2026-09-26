@@ -13,7 +13,7 @@ export function ServiceCard({ service, className = "" }: ServiceCardProps) {
         className="relative flex h-[400px] sm:h-[444px] md:h-[580px] lg:h-[660px] xl:h-[740px] flex-col rounded-[20px] bg-grey border-[15px] border-white mx-auto"
       >
         <div>
-          <h3 className="!text-[1.5rem] md:!text-[1.5rem] lg:!text-[1.4rem] w-[150px] sm:w-[150px] md:w-[150px] lg:w-[150px] xl:w-[300px] xl:!text-[2.5rem] uppercase mt-[30px] sm:mt-[46px] ml-[20px] sm:ml-[36px] md:mt-[46px] md:ml-[20px] lg:ml-[40px] xl:ml-[70px]">
+          <h3 className="!text-[1.5rem] md:!text-[1.5rem] lg:!text-[1.4rem] w-[150px] sm:w-[150px] md:w-[150px] lg:w-[150px] xl:w-[280px] xl:!text-[2.5rem] uppercase mt-[30px] sm:mt-[46px] ml-[20px] sm:ml-[36px] md:mt-[46px] md:ml-[20px] lg:ml-[40px] xl:ml-[70px]">
             {service.title}
           </h3>
         </div>
