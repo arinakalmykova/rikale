@@ -9,11 +9,7 @@ type Project = {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://rikale.ru";
 
-  const response = await fetch(`${API_URL}/projects`);
-
-  const projects: Project[] = await response.json();
-
-  return [
+  const pages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -26,10 +22,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${baseUrl}/price`,
       lastModified: new Date(),
     },
-
-    ...projects.map((project) => ({
-      url: `${baseUrl}${project.link}`,
-      lastModified: new Date(project.updatedAt),
-    })),
   ];
+
+  try {
+    const response = await fetch(`${API_URL}/projects`, {
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      return pages;
+    }
+
+    const projects: Project[] = await response.json();
+
+    return [
+      ...pages,
+      ...projects.map((project) => ({
+        url: `${baseUrl}${project.link}`,
+        lastModified: new Date(project.updatedAt),
+      })),
+    ];
+  } catch {
+    return pages;
+  }
 }
