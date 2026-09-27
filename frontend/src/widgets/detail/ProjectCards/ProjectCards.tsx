@@ -22,7 +22,7 @@ type Props = {
 
 export function ProjectCards({ cards }: Props) {
   return (
-    <div className="grid grid-cols-1 tablet:grid-cols-2 gap-[20px] md:gap-[20px] mt-[60px] md:mt-[80px] xl:mt-[100px]">
+    <div className="grid grid-cols-1 tablet:grid-cols-2 gap-[20px] md:gap-[20px] items-stretch mt-[60px] md:mt-[80px] xl:mt-[100px]">
       {cards.map((card, index) => (
         <motion.div
           key={index}
@@ -30,16 +30,18 @@ export function ProjectCards({ cards }: Props) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
-          className="relative shadow-[1px_1px_30px_rgba(0,0,0,0.25)] rounded-[20px] border-[10px] md:border-[15px] border-white bg-grey p-[24px] md:p-[32px] xl:p-[40px] flex flex-col h-[550px] md:h-[650px] xl:h-[700px]"
+          className="relative shadow-[1px_1px_30px_rgba(0,0,0,0.25)] rounded-[20px] border-[10px] md:border-[15px] border-white bg-grey p-[24px] md:p-[32px] xl:p-[40px] flex flex-col min-h-[450px] md:min-h-[650px] xl:min-h-[700px] h-full"
         >
           {card.img && (
-            <div className="absolute bottom-[15px] right-[15px] hidden sm:w-60 sm:h-60 sm:block tablet:hidden xl:w-60 xl:h-60 xl:block pointer-events-none opacity-90">
+            <div className="absolute bottom-[25px] right-[25px] hidden sm:block sm:w-[45%] md:w-[60%] xl:w-[50%] aspect-[4/3] pointer-events-none">
               <Image
                 src={card.img}
                 alt={card.title}
                 fill
-                className="object-contain"
-                sizes="250px"
+                quality={100}
+                priority={index < 2}
+                sizes="(min-width: 1280px) 400px, (min-width: 768px) 320px, 60vw"
+                className="object-contain object-bottom drop-shadow-[0_10px_20px_rgba(0,0,0,0.15)]"
               />
             </div>
           )}
@@ -69,7 +71,7 @@ export function ProjectCards({ cards }: Props) {
                 </h4>
 
                 {sub.items && sub.items.length > 0 && (
-                  <ul className="flex flex-col gap-[8px] ml-[20px] md:ml-[40px]">
+                  <ul className="flex flex-col gap-[8px] ml-[20px] md:ml-[40px] max-w-[300px] xl:max-w-[500px]">
                     {sub.items.map((item, i) => (
                       <li
                         key={i}

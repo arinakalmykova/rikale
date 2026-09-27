@@ -45,8 +45,8 @@ export function AboutMe() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
       >
-        <div className="flex items-center justify-between mb-[30px]">
-          <div className="flex gap-[20px] md:gap-[40px]">
+        <div className="flex flex-col gap-[30px] md:flex-row md:items-center md:justify-between mb-[30px]">
+          <div className="flex gap-[20px] md:gap-[40px] order-2 md:order-1">
             <button
               type="button"
               onClick={() => setActiveTab("design")}
@@ -73,14 +73,14 @@ export function AboutMe() {
           </div>
 
           <motion.h4
-            className="pl-[16px] border-l !text-[1rem] md:!text-[1.125rem]"
+            className="pl-[16px] border-l !text-[1rem] md:!text-[1.125rem] order-1 md:order-2"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
           >
             Освоила
             <br />
-            топовый софт
+            топовые скиллы
             <br />
             и технологии:
           </motion.h4>

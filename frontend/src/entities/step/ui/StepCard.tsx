@@ -8,7 +8,7 @@ interface StepCardProps {
 export function StepCard({ step, className = "" }: StepCardProps) {
   return (
     <div
-      className={`${className} w-auto group border-[15px] border-white bg-grey p-[8px] sm:p-[18px] lg:p-[18px] xl:p-[28px] flex flex-col justify-between hover:bg-blue`}
+      className={`${className} w-auto group border-[15px] border-white bg-grey p-[18px] sm:p-[18px] lg:p-[18px] xl:p-[28px] flex flex-col justify-between hover:bg-blue`}
     >
       <div className="flex items-center gap-[16px]">
         <svg

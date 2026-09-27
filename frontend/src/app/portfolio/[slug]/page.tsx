@@ -1,5 +1,4 @@
 
-"use client";
 import { Header, Footer } from "@/widgets";
 import { notFound } from "next/navigation";
 import { getProjectByLink } from "@/entities";
@@ -59,7 +58,7 @@ export default async function ProjectPage({ params }: Props) {
       <Header />
       <main className="px-[20px] md:px-[60px] xl:px-[100px] 2xl:px-[120px]">
         <section className="pt-[60px] md:pt-[80px] xl:pt-[100px] pb-[80px] md:pb-[100px] xl:pb-[120px]">
-          <h1 className="text-center uppercase !text-[3rem] md:!text-[4rem] mb-[30px] md:mb-[80px] xl:mb-[100px]">
+          <h1 className="text-center uppercase !text-[2rem] md:!text-[3rem] xl:!text-[4rem] mb-[30px] md:mb-[80px] xl:mb-[100px]">
             Портфолио
           </h1>
 
