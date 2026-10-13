@@ -34,6 +34,7 @@ export function AboutMe() {
 
   return (
     <motion.section
+      id="about"
       className="w-full flex flex-col lg:flex-row gap-[60px] lg:gap-[150px] items-center mt-[80px] lg:mt-[180px] px-4 lg:px-0"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}

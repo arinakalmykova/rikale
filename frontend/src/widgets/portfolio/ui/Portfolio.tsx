@@ -44,17 +44,10 @@ export function Portfolio() {
       ) : (
         <Swiper
           slidesPerView={1}
-          autoHeight={true} 
-          className="w-full pb-12 md:pb-0 !overflow-hidden"
+          autoHeight={false}
+          className="pb-12 md:pb-0 !overflow-hidden"
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
-          }}
-          breakpoints={{
-            640: { slidesPerView: 1, spaceBetween: 30 },
-            768: { slidesPerView: 1, spaceBetween: 30 },
-            1024: { slidesPerView: 1, spaceBetween: 30 },
-            1280: { slidesPerView: 1, spaceBetween: 30 },
-            1920: { slidesPerView: 1, spaceBetween: 30 },
           }}
         >
           {projects.map((project, index) => (

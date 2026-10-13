@@ -17,7 +17,7 @@ export function Services() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <motion.div
-        className="mb-[80px] md:mb-[128px]"
+        className="mb-[40px] sm:mb-[80px] md:mb-[128px]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
@@ -26,51 +26,30 @@ export function Services() {
           Услуги
         </h1>
       </motion.div>
-      <div className="block">
+
       <Swiper
         modules={[Pagination]}
-        initialSlide={1}
-        spaceBetween={20}
+        spaceBetween={16}
         slidesPerView={1}
         centeredSlides={true}
-        pagination={{
-          clickable: true,
-        }}
-        className="w-full pb-12 md:pb-0"
+        pagination={{ clickable: true }}
+        className="w-full pb-12 md:pb-0 !overflow-visible"
         breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            centeredSlides: true,
-          },
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            centeredSlides: true,
-          },
-          945: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            centeredSlides: true,
-          },
-          1024: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            centeredSlides: true,
-          },
-          1280: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1920: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
+          0:   { slidesPerView: 1, spaceBetween: 16, centeredSlides: false },
+          340:   { slidesPerView: 1.2, spaceBetween: 16, centeredSlides: false },
+          400:   { slidesPerView: 1.5, spaceBetween: 16, centeredSlides: false },
+          580: { slidesPerView: 1.8, spaceBetween: 20, centeredSlides: false },
+          640: { slidesPerView: 1.8, spaceBetween: 20, centeredSlides: false },
+          1024:{ slidesPerView: 2, spaceBetween: 24, centeredSlides: false },
+          1280:{ slidesPerView: 2, spaceBetween: 24, centeredSlides: false },
+          1380:{ slidesPerView: 2.3, spaceBetween: 24, centeredSlides: false },
+          1920:{ slidesPerView: 3, spaceBetween: 30, centeredSlides: false },
         }}
       >
         {services.map((service, index) => (
-          <SwiperSlide key={service.id} className="h-auto">
+          <SwiperSlide key={service.id} className="!h-auto flex">
             <motion.div
+              className="w-full h-full"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -78,10 +57,7 @@ export function Services() {
                 delay: 0.4 + index * 0.1,
                 ease: "easeOut",
               }}
-              whileHover={{
-                y: -10,
-                transition: { duration: 0.2 },
-              }}
+              whileHover={{ y: -10, transition: { duration: 0.2 } }}
             >
               <ServiceCard
                 service={service}
@@ -91,7 +67,6 @@ export function Services() {
           </SwiperSlide>
         ))}
       </Swiper>
-       </div>
 
       <div className="flex justify-end mt-[40px]">
         <Button className="text-blue" href="/price">
