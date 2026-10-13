@@ -18,9 +18,9 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div
-     className={`${className} w-full py-[40px] md:py-[60px] border-y flex flex-col 2xl:flex-row gap-[30px] md:gap-[60px] xl:gap-[60px] 2xl:gap-[115px]`}
+     className={`${className} w-full py-[40px] md:py-[60px] border-y flex flex-col xl:flex-row gap-[30px] md:gap-[60px] xl:gap-[60px] 2xl:gap-[115px]`}
     >
-      <div className="w-full 2xl:w-[45%] flex flex-col order-2 2xl:order-1">
+      <div className="w-full xl:w-[45%] flex flex-col order-2 xl:order-1">
         <h3 className="!text-[1.5rem] xl:!text-[2.25rem] uppercase mb-[20px] md:mb-[28px]">
           {project.title}
         </h3>
@@ -54,7 +54,7 @@ export function ProjectCard({
         </div>
       </div>
 
-     <div className="w-full 2xl:w-[85%] order-1 2xl:order-2 flex justify-center min-w-0 self-center">
+     <div className="w-full xl:w-[85%] order-1 xl:order-2 flex justify-center min-w-0 self-center">
   <div className="relative w-fit h-fit max-w-full border-[10px] md:border-[15px] border-white rounded-[20px]">
           <Image
             src={project.images[0]}
