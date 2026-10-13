@@ -166,10 +166,22 @@ export function Header() {
                       damping: 15
                     }}
                   >
-                    <Link
+                   <Link
                       href={item.href}
-                      onClick={closeMenu}
-                      className=" text-xl md:text-2xl uppercase font-bold text-black hover:text-blue transition-colors duration-300 block py-2 border-b border-grey"
+                      onClick={() => {
+                        closeMenu();
+
+                        if (item.href.startsWith("/#")) {
+                          const id = item.href.slice(2);
+
+                          setTimeout(() => {
+                            document.getElementById(id)?.scrollIntoView({
+                              behavior: "smooth",
+                            });
+                          }, 100);
+                        }
+                      }}
+                      className="text-xl md:text-2xl uppercase font-bold text-black hover:text-blue transition-colors duration-300 block py-2 border-b border-grey"
                     >
                       {item.title}
                     </Link>

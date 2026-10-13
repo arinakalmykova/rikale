@@ -55,38 +55,44 @@ export function ProjectCard({
       </div>
 
       <div className="w-full xl:w-[85%] order-1 xl:order-2 flex justify-center">
-        <div className="relative w-fit max-w-full max-h-[260px] sm:max-h-[340px] md:max-h-[440px] lg:max-h-[520px] xl:max-h-[560px] 2xl:max-h-[620px] rounded-[20px] border-[10px] md:border-[15px] border-white overflow-hidden">
+        <div className="relative w-fit max-w-full rounded-[20px] border-[10px] md:border-[15px] border-white">
           <Image
             src={project.images[0]}
             alt={`Фото портфолио: ${project.title}`}
             width={1200}
             height={800}
-            sizes="(max-width: 1280px) 85vw, 55vw"
-            className="block w-auto h-auto max-w-full max-h-[240px] sm:max-h-[320px] md:max-h-[410px] lg:max-h-[490px] xl:max-h-[530px] 2xl:max-h-[590px] object-contain rounded-[20px] image-cool-tones"
+            sizes="(max-width: 640px) 95vw, (max-width: 1280px) 85vw, 55vw"
+            className="block w-auto h-auto max-w-full max-h-[340px] sm:max-h-[400px] md:max-h-[410px] lg:max-h-[490px] xl:max-h-[530px] 2xl:max-h-[590px] object-contain rounded-[10px] image-cool-tones"
             priority
           />
-          <div className="absolute -bottom-3 -right-3 z-10">
-            <Link
-              href={project.link}
-              className="flex items-center justify-center w-[70px] h-[70px] md:w-[100px] md:h-[100px] xl:w-[130px] xl:h-[130px] 2xl:w-[160px] 2xl:h-[160px] relative"
-            >
-              <div className="absolute inset-0 bg-blue border-[8px] sm:border-[10px] md:border-[15px] border-white rounded-tl-[20px] rounded-br-[20px] border-t border-l" />
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="51"
-                height="51"
-                viewBox="0 0 51 51"
-                fill="none"
-                className="relative z-10 w-[20px] h-[20px] md:w-[30px] md:h-[30px] xl:w-[40px] xl:h-[40px] 2xl:w-[51px] 2xl:h-[51px]"
-              >
-                <path
-                  d="M42.5147 14.4853L6.00004 51L0 45L36.5147 8.4853L4.33098 8.48531L4.33098 0L51 0L51 46.669L42.5147 46.669L42.5147 14.4853Z"
-                  fill="black"
-                />
-              </svg>
-            </Link>
-          </div>
+          <Link
+            href={project.link}
+            aria-label={`Посмотреть проект: ${project.title}`}
+            className="absolute bottom-0 right-0 z-10 flex items-center justify-center
+        w-[70px] h-[70px]
+sm:w-[80px] sm:h-[80px]
+md:w-[85px] md:h-[85px]
+xl:w-[110px] xl:h-[110px]
+2xl:w-[135px] 2xl:h-[135px]
+        bg-blue
+        border-t-[6px] border-l-[6px] border-white
+        sm:border-t-[8px] sm:border-l-[8px]
+        md:border-t-[12px] md:border-l-[12px]
+        rounded-tl-[16px] rounded-br-[10px]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 51 51"
+              fill="none"
+              className="w-[26px] h-[26px] sm:w-[30px] sm:h-[30px] md:w-[30px] md:h-[30px] xl:w-[36px] xl:h-[36px] 2xl:w-[44px] 2xl:h-[44px]"
+            >
+              <path
+                d="M42.5147 14.4853L6.00004 51L0 45L36.5147 8.4853L4.33098 8.48531L4.33098 0L51 0L51 46.669L42.5147 46.669L42.5147 14.4853Z"
+                fill="black"
+              />
+            </svg>
+          </Link>
         </div>
       </div>
     </div>
