@@ -35,13 +35,13 @@ export function AboutMe() {
   return (
     <motion.section
       id="about"
-      className="w-full flex flex-col lg:flex-row gap-[60px] lg:gap-[150px] items-center mt-[80px] lg:mt-[180px] px-4 lg:px-0"
+      className="w-full flex flex-col desktop:flex-row gap-[60px] lg:gap-[150px] items-center mt-[80px] lg:mt-[180px] px-4 lg:px-0"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <motion.div
-        className="flex flex-col w-full lg:w-[60%] order-2 lg:order-1"
+        className="flex flex-col w-full desktop::w-[60%] order-2 lg:order-1"
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
@@ -126,7 +126,7 @@ export function AboutMe() {
       </motion.div>
 
       <motion.div
-        className="flex flex-col w-full lg:w-[40%] order-1 lg:order-2"
+        className="flex flex-col w-full desktop::w-[40%] order-1 lg:order-2"
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}

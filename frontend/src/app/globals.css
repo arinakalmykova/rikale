@@ -22,6 +22,7 @@
   --color-grey-dark: var(--grey-dark);
   --font-helios: var(--font-family-helios-cond);
   --font-miracle: var(--font-family-miracle);
+  --breakpoint-desktop: 75rem;
   --breakpoint-tablet: 51.25rem;
   --breakpoint-mobile: 23.75rem;
 }
